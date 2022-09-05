@@ -1,3 +1,21 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
+.Header{
+    position: sticky;
+    
+    h1{
+        color: white;
+        border: 1px solid black;
+        border-radius: 0.1em;
+        padding: 1vh;
+        background-color: #AF7627;
+        width: 11%;
+    }
+}
+
 .Footer {
     position: fixed;
     left: 0;
@@ -13,11 +31,17 @@
     div{
         padding-left: 5em;
         padding-right: 5em;
+        margin: 1vh 0;
+
+        p{
+           margin: 1vh 0;
+        }
     }
 
     .footerIcons {
+        margin-left: 15vw;
         img {
-            width: 5%;
+            width: 15%;
             filter: invert(100%);
             padding: 1vh;
         }
