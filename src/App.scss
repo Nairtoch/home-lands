@@ -1,0 +1,25 @@
+.Footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: black;
+    display: grid;
+    grid-template-columns: auto auto auto 40%;
+    align-items: center;
+    text-align: center;
+
+    div{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+
+    .footerIcons {
+        img {
+            width: 5%;
+            filter: invert(100%);
+            padding: 1vh;
+        }
+    }
+}
