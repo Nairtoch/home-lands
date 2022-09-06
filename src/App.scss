@@ -1,18 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import "Assets/scss/mixins.scss";
+@import "Assets/scss/vars.scss";
+
 * {
     text-decoration: none;
     list-style: none;
 }
 
+body {
+    max-width: 1200px;
+    margin: auto;
+    color: black;
+    font-family: $font-family;
+}
+
 .Header{
     position: sticky;
-    
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    clip-path: polygon(100% 0, 100% 100%, 30% 60%, 0 100%, 0 0);
+    background-color: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
     h1{
         color: white;
         border: 1px solid black;
         border-radius: 0.1em;
         padding: 1vh;
         background-color: #AF7627;
-        width: 11%;
+        width: 34%;
+        font-family: $odibee;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 1vw;
+        font-family: $odibee;
+        
+        a {
+            color: white;
+
+            :nth-of-type(2){
+                color: #AF7627;
+            }
+        }
+    }
+}
+
+.LoginForm{
+    input{
+        padding: 2vh 0;
+        margin: 2vh 0 ;
+        width: 30%;
+        color: black;
+        border: solid 1px black;
+        border-radius: 0.3em;
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.75);
+    } 
+
+    button {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 7%;
+        color: white;
+        background-color: black;
+        padding: 1em;
+        border-radius: 0.3em;
+        margin: 1em;
+        margin-left: 0;
     }
 }
 
