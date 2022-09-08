@@ -1,0 +1,10 @@
+// style component
+
+.ProductListWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.5em;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
