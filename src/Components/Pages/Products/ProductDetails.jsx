@@ -15,6 +15,7 @@ export const ProductDetails = props => {
             try {
                 const result = await axios.get(`https://api.mediehuset.net/homelands/homes/${product_id}`)
                 setProductData(result.data.item);
+                console.log(productData);
             }
             catch (err) {
                 console.error(err)
@@ -80,17 +81,19 @@ export const ProductDetails = props => {
                 </div>
                 <div className="DetailContact">
                     <h2>Kontakt</h2>
-                    {productData ? (
-                        <div>
-                            {productData.staff && productData.staff.image && productData.staff.image && (
-                                <img src={productData.staff.image} alt="" />
-                            )}
-                        </div>
-                    ) : null}
-                    <p>{productData.staff.firstname} {productData.staff.lastname}</p>
-                    <p>{productData.staff.position}</p>
-                    <p>Mobil: {productData.staff.phone}</p>
-                    <p>Email: {productData.staff.email}</p>
+                    {productData.staff && (
+                        <>
+                            <div>
+                                {productData.staff && productData.staff.image && productData.staff.image && (
+                                    <img src={productData.staff.image} alt="" />
+                                )}
+                            </div>
+                            <p>{productData.staff.firstname} {productData.staff.lastname}</p>
+                            <p>{productData.staff.position}</p>
+                            <p>Mobil: {productData.staff.phone}</p>
+                            <p>Email: {productData.staff.email}</p>
+                        </>
+                    )}
                 </div>
             </div>
         </section>
