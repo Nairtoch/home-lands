@@ -14,6 +14,7 @@ export const ProductListItem = props => {
                 <h3>{props.data.address}</h3>
                 <p>{props.data.zipcode} {props.data.city}</p>
                 <p>{props.data.type}</p>
+                <Link to={`/products/${props.data.id}`}>Læs Mere</Link>
             </span>
             <span className='ProductCardBottom'>
                 <p className='EnergyLabel'>

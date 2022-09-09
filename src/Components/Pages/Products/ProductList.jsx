@@ -1,13 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { Layout } from "../../App/Layout/Layout"
 import { ProductListItem } from "./ProductListItem";
 import Style from "./ProductListItem.module.scss";
 
 export const ProductList = () => {
     const [productList, setProductList] = useState([]);
-    // This hook takes our url and makes an object from it
 
     useEffect(() => {
         const getProductList = async () => {

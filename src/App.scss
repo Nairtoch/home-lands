@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 @import "Assets/scss/mixins.scss";
 @import "Assets/scss/vars.scss";
@@ -12,12 +11,13 @@
 body {
     max-width: $container_width;
     margin: 0 auto;
+    margin-bottom: 8rem;
     color: black;
     font-family: $font-family;
 }
 
 
-.Header{
+.Header {
     position: sticky;
     display: grid;
     grid-template-columns: auto auto;
@@ -30,9 +30,9 @@ body {
     height: 100%;
     align-items: center;
     text-align: center;
-    border: 2px solid red;
+    z-index: 1;
 
-    h1{
+    h1 {
         color: white;
         border: 1px solid black;
         border-radius: 0.1em;
@@ -46,27 +46,29 @@ body {
         display: inline-block;
         margin: 0 1vw;
         font-family: $odibee;
-        
+
         a {
             color: white;
 
-            :active{
+            :active {
                 color: #AF7627;
             }
         }
     }
 
-    fieldset {
-        border: none;
+    .SearchField {
+        // border: 2px solid red;
         border-radius: 0.3em;
+        @include reset;
 
         .SearchButton {
             background-color: #999999;
             margin: 0;
             padding: 0;
+            width: 3vh;
 
             img {
-                width: 5%;
+                width: 100%;
                 filter: invert(100%);
             }
         }
@@ -90,13 +92,14 @@ body {
         overflow: hidden;
     }
 
-    span{
+    span {
         padding-left: 1.5em;
     }
 
     p {
         padding-bottom: 1vh;
         margin: 0;
+        font-size: 0.8em;
     }
 
     .ProductCardBottom {
@@ -116,16 +119,82 @@ body {
 }
 
 
-.LoginForm{
-    input{
+.ProductDetails {
+    img {
+        width: 100%;
+        top: -130px;
+        z-index: -1;
+        position: relative;
+    }
+
+    .Detail-col3 {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 3.5em;
+        justify-content: center;
+
+        .DetailIntro {
+            float: left;
+
+            h2 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin: 0.5rem 0;
+                padding: 0;
+            }
+        }
+
+        .DetailIcons {
+            img {
+                width: 5%;
+                border: 1px solid black;
+                // border-radius: 3em;
+                padding: 1em;
+                margin: 1em;
+            }
+        }
+
+        .DetailInfo {
+            span {
+                float: right;
+            }
+        }
+    }
+
+    .Detail-col2 {
+        display: grid;
+        grid-template-columns: 66% 33%;
+        grid-gap: 2.5em;
+
+        .DetailContact {
+            display: grid;
+            grid-template-rows: auto;
+
+            img {
+                width: 50%;
+                margin-top: 30%;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+.LoginForm {
+    input {
         padding: 2vh 0;
-        margin: 2vh 0 ;
+        margin: 2vh 0;
         width: 30%;
         color: black;
         border: solid 1px black;
         border-radius: 0.3em;
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
-    } 
+    }
 
     button {
         margin: 0;
@@ -153,23 +222,25 @@ body {
     grid-template-columns: auto auto auto 40%;
     align-items: center;
     text-align: center;
+    height: 6rem;
 
-    div{
+    div {
         padding-left: 5em;
         padding-right: 5em;
 
-        h3{
+        h3 {
             font-family: $odibee;
             font-size: 2em;
         }
 
-        p{
-           margin: 1vh 0;
+        p {
+            margin: 1vh 0;
         }
     }
 
     .footerIcons {
         margin-left: 15vw;
+
         img {
             width: 15%;
             filter: invert(100%);
